@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
+Route::group(array('prefix' => 'admin', 'middleware' => 'auth'), function(){
+	Route::resource("posts","AdminPostController");
+});
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::get('/', array('as' => 'home', 'uses' => 'PostsController@index'));
+Route::get('post/{id}', array('as' => 'post', 'uses' => 'PostsController@show'))->where('id', '[1-9][0-9]*');
