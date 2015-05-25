@@ -3,9 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Dannie's Admin Panel</title>
+	
 	{!! HTML::style('css/admin.css') !!}
+    
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+
+    {!! HTML::script('js/ckeditor/ckeditor.js') !!}
 
     <!-- Custom styles for this template -->
     <!-- <link href="starter-template.css" rel="stylesheet"> -->
@@ -31,7 +35,7 @@
 	        </div>
 	        <div id="navbar" class="collapse navbar-collapse">
 	            <ul class="nav navbar-nav">
-	                <li class="active"><a href="#">Home</a></li>
+	                <li class="active"><a href="/">Home</a></li>
 	                <li><a href="#about">About</a></li>
 	                <li><a href="#contact">Contact</a></li>
 	            </ul>

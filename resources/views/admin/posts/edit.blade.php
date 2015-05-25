@@ -23,7 +23,12 @@
                 </div>
                     <div class="form-group">
                      <label for="body">BODY</label>
-                     <input type="text" name="body" class="form-control" value="{{$post->body}}"/>
+                     <textarea name="body" id="body" class="form-control" rows="8" value=""/>{{$post->body}}</textarea>
+                     <script>
+                        // Replace the <textarea id="editor1"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'body' );
+                     </script>
                 </div>
                     <div class="form-group">
                      <label for="user_id">USER_ID</label>
